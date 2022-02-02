@@ -12,9 +12,15 @@ public class Application {
 
         // Loading Spring and config files into Application Context
         ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
 
+        SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
+        System.out.println(service);
         System.out.println(service.findAll().get(0).getFirstName());
+
+        SpeakerService service2 = appContext.getBean("speakerService", SpeakerService.class);
+        System.out.println(service2);
+        System.out.println(service2.findAll().get(0).getFirstName());
+
     }
 
 }
