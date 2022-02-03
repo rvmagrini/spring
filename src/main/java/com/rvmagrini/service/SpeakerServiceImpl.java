@@ -9,7 +9,9 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;
 
-    public SpeakerServiceImpl() {}
+    public SpeakerServiceImpl() {
+        System.out.println("SpeakerServiceImpl no args constructor");
+    }
 
     public SpeakerServiceImpl(SpeakerRepository repository) {
         System.out.println("SpeakerServiceImpl repository constructor injection");

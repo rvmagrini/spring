@@ -8,8 +8,10 @@
           class="com.rvmagrini.repository.HibernateSpeakerRepositoryImpl" />
 
     <bean name="speakerService"
-          class="com.rvmagrini.service.SpeakerServiceImpl" >
-        <constructor-arg index="0" ref="speakerRepository" />
+          class="com.rvmagrini.service.SpeakerServiceImpl" autowire="constructor">
+<!--        class="com.rvmagrini.service.SpeakerServiceImpl" autowire="byType">-->
+<!--        class="com.rvmagrini.service.SpeakerServiceImpl" autowire="byName">-->
+
     </bean>
 
 </beans>
