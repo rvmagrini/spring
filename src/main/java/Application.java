@@ -11,8 +11,8 @@ public class Application {
         // Sample without Spring
         // SpeakerService service = new SpeakerServiceImpl();
 
-        // Loading Spring and XML config file into Application Context
-        ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        // Loading Spring by Java Config
+        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
         SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
         System.out.println(service);
