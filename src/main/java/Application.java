@@ -16,7 +16,10 @@ public class Application {
 
         SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
         System.out.println(service);
-        System.out.println(service.findAll().get(0).getFirstName());
+        System.out.println("First Name: " + service.findAll().get(0).getFirstName());
+        System.out.println("Last Name: " + service.findAll().get(0).getLastName());
+        System.out.println("Seed Value: " + service.findAll().get(0).getSeedNum());
+
 
 
     }
