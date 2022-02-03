@@ -9,6 +9,13 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;
 
+    public SpeakerServiceImpl() {}
+
+    public SpeakerServiceImpl(SpeakerRepository repository) {
+        System.out.println("SpeakerServiceImpl repository constructor injection");
+        this.repository = repository;
+    }
+
     public void setSpeakerRepository(SpeakerRepository repository) {
         System.out.println("SpeakerServiceImpl repository setter injection");
         this.repository = repository;
