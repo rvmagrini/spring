@@ -2,6 +2,7 @@ import com.rvmagrini.service.SpeakerService;
 import com.rvmagrini.service.SpeakerServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Application {
 
@@ -10,8 +11,8 @@ public class Application {
         // Sample without Spring
         // SpeakerService service = new SpeakerServiceImpl();
 
-        // Loading Spring and config files into Application Context
-        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        // Loading Spring and XML config file into Application Context
+        ApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
         System.out.println(service);
